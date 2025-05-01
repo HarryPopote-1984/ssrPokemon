@@ -39,11 +39,13 @@ export default class PokemonsPageComponent {
     )
   );
 
+  // este es un efecto cuando pa pagina cambie
   public loadOnPageChanged = effect(
     () => {
       this.loadPokemons(this.currentPage());
     },
     {
+      // cuando este recargando signal en un effect, tengo qeu agregar este codigo
       allowSignalWrites: true,
     }
   );
